@@ -20,6 +20,9 @@ As per the official Balsamiq Website
 This document will serve as an unofficial specification of BMPR for me to better understand it compared to BMML
 # BMML vs. BMPR
 As stated above, the new format is BMPR, which is based on JSON (Java Script Object Notation), the old format called BMML (Balsamiq Mockups Markup Language) was based on XML (Extenstible Markup Language)
+For old documentation, check out a copy of BMML Format Specification taken from
+
+http://media.balsamiq.com/files/Balsamiq_Mockups_v1-v2_Docs.pdf
 
 My first impression of BMPR was...
 > it was very messy and didn't line up properly, but after playing with it for a while and using Sublime Text 3, I have found it to be easier to read and better to manipulate using Regular Expresssions and simple find and replace.
