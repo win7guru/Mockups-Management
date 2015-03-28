@@ -1,0 +1,58 @@
+<mockup version="1.0" skin="wireframe" fontFace="Balsamiq Sans" measuredW="728" measuredH="798" mockupW="728" mockupH="798">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::TextArea" x="0" y="0" w="226" h="182" measuredW="200" measuredH="140" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>left</align>
+        <color>16777215</color>
+        <text>iPhone%20Keyboard%20-%20Standard%0A%20%0A%3Cmockup%20version%3D%221.0%22%20skin%3D%22sketch%22%20fontFace%3D%22Balsamiq%20Sans%22%20measuredW%3D%220%22%20measuredH%3D%220%22%20mockupW%3D%220%22%20mockupH%3D%220%22%3E%0A%20%20%3Ccontrols%3E%0A%20%20%20%20%3Ccontrol%20controlID%3D%228%22%20controlTypeID%3D%22com.balsamiq.mockups%3A%3AiPhoneKeyboard%22%20x%3D%2260%22%20y%3D%2290%22%20w%3D%22-1%22%20h%3D%22-1%22%20measuredW%3D%22226%22%20measuredH%3D%22160%22%20zOrder%3D%220%22%20locked%3D%22false%22%20isInGroup%3D%22-1%22/%3E%0A%20%20%3C/controls%3E%0A%3C/mockup%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::TextArea" x="0" y="182" w="403" h="135" measuredW="200" measuredH="140" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>left</align>
+        <color>16777215</color>
+        <text>iPhone%20Keyboard%20-%20Wide%0A%20%0A%3Cmockup%20version%3D%221.0%22%20skin%3D%22sketch%22%20fontFace%3D%22Balsamiq%20Sans%22%20measuredW%3D%220%22%20measuredH%3D%220%22%20mockupW%3D%220%22%20mockupH%3D%220%22%3E%0A%20%20%3Ccontrols%3E%0A%20%20%20%20%3Ccontrol%20controlID%3D%229%22%20controlTypeID%3D%22com.balsamiq.mockups%3A%3AiPhoneKeyboard%22%20x%3D%2260%22%20y%3D%22302%22%20w%3D%22-1%22%20h%3D%22-1%22%20measuredW%3D%22403%22%20measuredH%3D%22114%22%20zOrder%3D%220%22%20locked%3D%22false%22%20isInGroup%3D%22-1%22%3E%0A%20%20%20%20%20%20%3CcontrolProperties%3E%0A%20%20%20%20%20%20%20%20%3Cdevice%3EiPhone%3C/device%3E%0A%20%20%20%20%20%20%20%20%3Corientation%3Elandscape%3C/orientation%3E%0A%20%20%20%20%20%20%3C/controlProperties%3E%0A%20%20%20%20%3C/control%3E%0A%20%20%3C/controls%3E%0A%3C/mockup%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::TextArea" x="0" y="317" w="546" h="209" measuredW="200" measuredH="140" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>left</align>
+        <color>16777215</color>
+        <text>iPad%20Keyboard%20-%20Standard%0A%20%0A%3Cmockup%20version%3D%221.0%22%20skin%3D%22sketch%22%20fontFace%3D%22Balsamiq%20Sans%22%20measuredW%3D%220%22%20measuredH%3D%220%22%20mockupW%3D%220%22%20mockupH%3D%220%22%3E%0A%20%20%3Ccontrols%3E%0A%20%20%20%20%3Ccontrol%20controlID%3D%2210%22%20controlTypeID%3D%22com.balsamiq.mockups%3A%3AiPhoneKeyboard%22%20x%3D%22497%22%20y%3D%2287%22%20w%3D%22-1%22%20h%3D%22-1%22%20measuredW%3D%22546%22%20measuredH%3D%22188%22%20zOrder%3D%220%22%20locked%3D%22false%22%20isInGroup%3D%22-1%22%3E%0A%20%20%20%20%20%20%3CcontrolProperties%3E%0A%20%20%20%20%20%20%20%20%3Cdevice%3EiPad%3C/device%3E%0A%20%20%20%20%20%20%20%20%3Corientation%3Eportrait%3C/orientation%3E%0A%20%20%20%20%20%20%3C/controlProperties%3E%0A%20%20%20%20%3C/control%3E%0A%20%20%3C/controls%3E%0A%3C/mockup%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::iPhoneKeyboard" x="0" y="22" w="-1" h="-1" measuredW="226" measuredH="160" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <markup>true</markup>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::iPhoneKeyboard" x="0" y="203" w="-1" h="-1" measuredW="403" measuredH="114" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <device>iPhone</device>
+        <markup>true</markup>
+        <orientation>landscape</orientation>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::iPhoneKeyboard" x="0" y="338" w="-1" h="-1" measuredW="546" measuredH="188" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <device>iPad</device>
+        <markup>true</markup>
+        <orientation>portrait</orientation>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::TextArea" x="0" y="526" w="728" h="40" measuredW="200" measuredH="140" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>left</align>
+        <color>16777215</color>
+        <text>iPad%20Keyboard%20-%20Wide%0A%20%0A%3Cmockup%20version%3D%221.0%22%20skin%3D%22sketch%22%20fontFace%3D%22Balsamiq%20Sans%22%20measuredW%3D%220%22%20measuredH%3D%220%22%20mockupW%3D%220%22%20mockupH%3D%220%22%3E%0A%20%20%3Ccontrols%3E%0A%20%20%20%20%3Ccontrol%20controlID%3D%2213%22%20controlTypeID%3D%22com.balsamiq.mockups%3A%3AiPhoneKeyboard%22%20x%3D%22497%22%20y%3D%22302%22%20w%3D%22-1%22%20h%3D%22-1%22%20measuredW%3D%22728%22%20measuredH%3D%22251%22%20zOrder%3D%220%22%20locked%3D%22false%22%20isInGroup%3D%22-1%22%3E%0A%20%20%20%20%20%20%3CcontrolProperties%3E%0A%20%20%20%20%20%20%20%20%3Cdevice%3EiPad%3C/device%3E%0A%20%20%20%20%20%20%20%20%3Corientation%3Elandscape%3C/orientation%3E%0A%20%20%20%20%20%20%3C/controlProperties%3E%0A%20%20%20%20%3C/control%3E%0A%20%20%3C/controls%3E%0A%3C/mockup%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::iPhoneKeyboard" x="0" y="547" w="-1" h="-1" measuredW="728" measuredH="251" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <device>iPad</device>
+        <markup>true</markup>
+        <orientation>landscape</orientation>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

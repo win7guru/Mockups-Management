@@ -1,0 +1,55 @@
+<mockup version="1.0" skin="wireframe" fontFace="Balsamiq Sans" measuredW="1221" measuredH="345" mockupW="1221" mockupH="345">
+  <controls>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::RoundButton" x="440" y="289" w="-1" h="-1" measuredW="32" measuredH="32" zOrder="1" locked="false" isInGroup="-1"/>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::RoundButton" x="80" y="289" w="-1" h="-1" measuredW="32" measuredH="32" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <shape>rectangle</shape>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::RoundButton" x="195" y="289" w="-1" h="-1" measuredW="32" measuredH="32" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <shape>roundRect</shape>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::RoundButton" x="314" y="289" w="-1" h="-1" measuredW="32" measuredH="32" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <shape>dottedRect</shape>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::RoundButton" x="556" y="289" w="-1" h="-1" measuredW="32" measuredH="32" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <shape>diamond</shape>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::RoundButton" x="803" y="289" w="-1" h="-1" measuredW="32" measuredH="32" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <shape>star</shape>
+      </controlProperties>
+    </control>
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::RoundButton" x="678" y="289" w="-1" h="-1" measuredW="32" measuredH="32" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <shape>parallelogram</shape>
+      </controlProperties>
+    </control>
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::RoundButton" x="920" y="289" w="-1" h="-1" measuredW="32" measuredH="32" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <shape>triangle</shape>
+      </controlProperties>
+    </control>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::RoundButton" x="1006" y="296" w="65" h="49" measuredW="32" measuredH="32" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <shape>rectangle%20breakline%20bottom%20</shape>
+      </controlProperties>
+    </control>
+    <control controlID="26" controlTypeID="com.balsamiq.mockups::RoundButton" x="1156" y="289" w="65" h="49" measuredW="32" measuredH="32" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <shape>rectangle%20breakline%20top</shape>
+      </controlProperties>
+    </control>
+    <control controlID="27" controlTypeID="com.balsamiq.mockups::SiteMap" x="0" y="0" w="-1" h="-1" measuredW="1180" measuredH="310" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Shape%0A-Rectangle%0A--Normal%0A--Round%0A--Dotted%0A-Other%0A--Circle%0A--Diamond%0A--Parallelogram%0A--Star%0A--Triangle%0A-Breaklines%0A--Bottom%0A--Top</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

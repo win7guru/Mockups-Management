@@ -1,0 +1,80 @@
+<mockup version="1.0" skin="wireframe" fontFace="Balsamiq Sans" measuredW="1181" measuredH="380" mockupW="1181" mockupH="380">
+  <controls>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::SiteMap" x="0" y="0" w="-1" h="-1" measuredW="1180" measuredH="310" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Textbox%0A-States%0A--Normal%0A--In%20Focus%0A--Disabled%0A-Scrollbar%0A-Opacity%0A--Full%0A--Half%0A--None%0A-Linking%0A--Hyperlink%0A--Text%20Link%0A--Mockup%20Link</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::TextArea" x="0" y="310" w="101" h="70" measuredW="200" measuredH="140" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Some%20Text</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::TextArea" x="120" y="310" w="101" h="70" measuredW="200" measuredH="140" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>focused</state>
+        <text>Some%20Text</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::TextArea" x="241" y="310" w="101" h="70" measuredW="200" measuredH="140" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>disabled</state>
+        <text>Some%20Text</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::TextArea" x="360" y="189" w="101" h="70" measuredW="200" measuredH="140" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Some%20Text</text>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::TextArea" x="481" y="310" w="101" h="70" measuredW="200" measuredH="140" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <color>2848996</color>
+        <text>Some%20Text</text>
+        <value>0</value>
+        <verticalScrollbar>false</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::TextArea" x="600" y="310" w="101" h="70" measuredW="200" measuredH="140" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>0.5</backgroundAlpha>
+        <color>2848996</color>
+        <text>Some%20Text</text>
+        <value>0</value>
+        <verticalScrollbar>false</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::TextArea" x="720" y="310" w="101" h="70" measuredW="200" measuredH="140" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>0</backgroundAlpha>
+        <color>2848996</color>
+        <text>Some%20Text</text>
+        <value>0</value>
+        <verticalScrollbar>false</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::TextArea" x="841" y="310" w="101" h="70" measuredW="200" measuredH="140" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>http%3A//www.google.com</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22841%2C310%2C942%2C380%22%20href%3D%22http%3A//www.google.com%22%20alt%3D%22http%3A//www.google.com%22%20id%3D%2210%22%20target%3D%22_blank%22/%3E</map>
+        <text>Some%20Text</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::TextArea" x="961" y="310" w="101" h="70" measuredW="200" measuredH="140" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>http%3A//www.google.com</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22961%2C310%2C1062%2C380%22%20href%3D%22http%3A//www.google.com%22%20alt%3D%22http%3A//www.google.com%22%20id%3D%2211%22%20target%3D%22_blank%22/%3E</map>
+        <text>%5BGoogle%5D%28www.google.com%29</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::TextArea" x="1080" y="310" w="101" h="70" measuredW="200" measuredH="140" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>Controls%20Button%26bm%3BControls%20Button.bmml%26bm%3BControls%20Button.bmml%26bm%3BControls%20Button.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%221080%2C310%2C1181%2C380%22%20href%3D%22Controls%2520Button.bmml%22%20alt%3D%22Controls%20Button%22%20id%3D%2212%22/%3E</map>
+        <text>To%20Mockup</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
