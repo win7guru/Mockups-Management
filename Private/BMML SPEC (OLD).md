@@ -177,7 +177,7 @@ Window control
 	all controls that can have a 
 	single link to other controls
 
-<table><tr><small>**href**, like  
+<table><tr><small>**href**  
 
 <table>
 <tr>
@@ -199,23 +199,89 @@ Window control
 
 <table><tr><small>**hrefs** 
 
-It's a comma‑separated list of strings formatted the same way as a single href
-string (see previous bullet).
-icon: a string composed of both iconID of the icon to use for this control and its size, like
-this "iconID|48". There are over 220 icons, each with a unique ID. The sizes are either 16,
-24, 32 or 48. As of version 2.1.7, the left part can also be a src, either ./assets/filename
-or $ACCOUNT/assets/filename, based on where the custom icon is loaded from.
-indeterminate (bool) and scrollbarValue (0‑100): used for Progress Bar controls
-labelPosition ('bottom' or 'right'): used in the Icon and Label control
-leftArrow (bool), rightArrow (bool), curvature (‑1, 0, 1): used by the Arrow controls
-map (string): added on 9/14/2009: an escaped image map for the linked areas of the
-mockups, following the same format as the HTML map tag.
-onOffState ('on' or 'off'): used by the Switch control
-orientation ('portrait' or 'landscape'): used by the iPhone, iPhone control
-override: used by the Component control (see below)
-position ('left' or 'right'): used by Vertical Tab Bar
-selectedIndex (‑1 for none): the selected item in a list
-src: used by the Image and Component controls. It's either a relative path (for images
+	It's a comma‑separated list of strings 
+	formatted the same way as a single href string 
+	
+>(see previous bullet). 
+>
+>TODO-ADD Reference link to previous bullet `href`
+
+<table><tr><small>**icon**
+
+	a string composed of both
+
+`iconID`of the icon to use for this control and its `size`
+
+like this 
+
+`iconID`|`48`
+	
+	There are over 220 icons, each with a unique ID. 
+	
+	The sizes are either 16, 24, 32 or 48. 
+	
+>As of version 2.1.7, 
+>
+
+the left part can also be a src based on where the custom icon is loaded from.
+
+<table>**Example 1:** 
+
+`./assets/filename`|`32` 
+
+**Example 2:** 
+
+`$ACCOUNT/assets/filename`|`32`	
+
+#`Progress Bar` Controls
+
+<table><tr><small>**indeterminate** (`true`,`false`) and **scrollbarValue** (`0‑100`)
+
+#`Icon` and `Label` Controls
+
+<table><tr><small>**labelPosition** (`bottom` or `right`)
+
+#`Arrow` Controls
+
+<table><tr><small>**leftArrow** (`true`,`false`),
+**rightArrow** (`true`,`false`), **curvature** (`‑1`, `0`, `1`)
+
+<table><tr><small>**map** (`string`)
+>added on 9/14/2009
+	
+	an escaped image map 
+	for the linked areas of the mockups, 
+	following the same format as the HTML map tag.
+
+#`Switch` control	
+
+<table><tr><small>**onOffState** (`on` or `off`)
+ 
+#`iPhone` Control
+
+<table><tr><small>**orientation** (`portrait` or `landscape`)
+
+#`Component` Control
+
+**override**
+
+>(see below)
+
+#`Vertical Tab Bar` Controls
+
+<table><tr><small>**position** (`left` or `right`)
+
+#`List` Controls
+
+<table><tr><small>**selectedIndex** (`‑1 for none`)
+	
+	the selected item in a list
+
+#`Image` and `Component` Controls
+
+<table><tr><small>**src**
+
+It's either a relative path (for images
 loaded from disk) or an http url. If it starts with $ACCOUNT/assets, it means the image is
 in the account assets folder.
 state ('up', 'selected,', 'focused', 'disabled', 'disabledSelected'): the state of the control
