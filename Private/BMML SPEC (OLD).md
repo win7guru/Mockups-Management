@@ -1,44 +1,52 @@
 #BMML File Format Specification
+
 BMML is the Balsamiq Mockups Markup Language, the flavor of XML used by Balsamiq Mockups to save its data.
+	
+This document outlines the BMML file format, in the hopes that this will be useful to you when integrating Mockups in your daily work.  You could for instance import BMML into your
+tool, write a BMML parser which generates HTML or MXML or XAML or running code...the sky is the limit!
 
->This document outlines the BMML file format, in the hopes that this will be useful to you when integrating Mockups in your daily work. 
-
-You could for instance import BMML into your
-tool, write a BMML parser which generates HTML or MXML or XAML or running code...the sky
-is the limit!
-Warning: there are some things that aren't documented here, like what properties each
-control type supports. To figure those things out, just open Mockups, drag a control type to
-the canvas, change some properties in the property inspector and look at the resulting BMML.
-In other words, we try our best to keep this document up‑to‑date, but you should trust
+**Warning:** there are some things that aren't documented here, like what properties each control type supports. To figure those things out, just open Mockups, drag a control type to the canvas, change some properties in the property inspector and look at the resulting BMML.  In other words, we try our best to keep this document up‑to‑date, but you should trust
 shipped code more. :)
-Remember that XML syntax is case‑sensitive, e.g., <tag> and <Tag> are different.
+
+>Remember that XML syntax is case‑sensitive, e.g., <tag> and <Tag> are different.
 
 ##Quick Overview
 
 Here's a sample BMML containing a single `Callout` control:
-<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="941"
-measuredH="169" mockupW="36" mockupH="40">
+
+<table>
+<tr>
+
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="941" measuredH="169" mockupW="36" mockupH="40">
+
 <controls>
-<control
-controlID="1" controlTypeID="com.balsamiq.mockups::CallOut" x="644"
-y="129"
-w="-1" h="-1" measuredW="36" measuredH="40" zOrder="1" locked="false"
-isInGroup="-1">
+
+<control controlID="1" controlTypeID="com.balsamiq.mockups::CallOut" x="644" y="129" w="-1" h="-1" measuredW="36" measuredH="40" zOrder="1" locked="false" isInGroup="-1">
+
 <controlProperties>
+
 <text>Hello!</text>
+
 <backgroundAlpha>0.25</backgroundAlpha>
+
 <color>65280</color>
+
 </controlProperties>
+
 </control>
+
 </controls>
-</mockup>
+
+</mockup>```
+</table>
 As you can see, the top‑level tag is a 'mockup' tag. Within it, there's a 'controls' tag, which
 includes a list of 'control' elements, one for each control in the mockup. Each control element
 can include an optional 'controlProperties' element, with different children depending on the
 type of element. We will see below what all the attributes mean in detail.
 The Mockup Tag
 Here's the DTD snippet for the mockup tag:
-<!ELEMENT mockup ( controls? ) >
+
+```<!ELEMENT mockup ( controls? ) >
 <!ATTLIST mockup measuredW NMTOKEN #REQUIRED >
 <!ATTLIST mockup measuredH NMTOKEN #REQUIRED >
 <!ATTLIST mockup mockupW NMTOKEN #REQUIRED >
@@ -46,9 +54,9 @@ Here's the DTD snippet for the mockup tag:
 <!ATTLIST mockup skin NMTOKEN #REQUIRED >
 <!ATTLIST mockup fontFace NMTOKEN #REQUIRED >
 <!ATTLIST mockup version NMTOKEN #REQUIRED >
-<!ELEMENT controls ( control? ) >
-A 'mockup' tag includes a 'controls' tag, described below. measuredW and measuredH are the
-dimensions, in pixels, of the mockup, including the top‑left white space around it. mockupW
+<!ELEMENT controls ( control? ) >```
+
+A `mockup` tag includes a `controls` tag, described below. measuredW and measuredH are the dimensions, in pixels, of the mockup, including the top‑left white space around it. mockupW
 and mockupH are the dimensions of the mockup without any space around it. In other words,
 this would be the size of the PNG if you exported it. The skin tag, not used prior to 2.2.1, can
 either be "sketch" or "wireframe". The fontFace tag, introduced in 2.2.1, can either be
@@ -56,19 +64,22 @@ either be "sketch" or "wireframe". The fontFace tag, introduced in 2.2.1, can ei
 is 1.0 so far. The controls tag is simple, it doesn't have any attributes and just contains a list
 of 'control' tags.
 The Control Tags
+
 Here's the DTD snippet for the control tag:
-<!ELEMENT control ( controlProperties? ) >
-<!ATTLIST control controlID NMTOKEN #REQUIRED >
-<!ATTLIST control controlTypeID NMTOKEN #REQUIRED >
-<!ATTLIST control w NMTOKEN #FIXED "-1" >
-<!ATTLIST control h NMTOKEN #FIXED "-1" >
-<!ATTLIST control measuredH NMTOKEN #REQUIRED >
-<!ATTLIST control measuredW NMTOKEN #REQUIRED >
-<!ATTLIST control x NMTOKEN #REQUIRED >
-<!ATTLIST control y NMTOKEN #REQUIRED >
-<!ATTLIST control zOrder NMTOKEN #REQUIRED >
-<!ATTLIST control isInGroup NMTOKEN #FIXED "-1" >
-<!ATTLIST control locked NMTOKEN #FIXED "false" >
+
+`<!ELEMENT control ( controlProperties? ) >`
+`<!ATTLIST control controlID NMTOKEN #REQUIRED >`
+`<!ATTLIST control controlTypeID NMTOKEN #REQUIRED >`
+`<!ATTLIST control w NMTOKEN #FIXED "-1" >`
+`<!ATTLIST control h NMTOKEN #FIXED "-1" >`
+`<!ATTLIST control measuredH NMTOKEN #REQUIRED >`
+`<!ATTLIST control measuredW NMTOKEN #REQUIRED >`
+`<!ATTLIST control x NMTOKEN #REQUIRED >`
+`<!ATTLIST control y NMTOKEN #REQUIRED >`
+`<!ATTLIST control zOrder NMTOKEN #REQUIRED >`
+`<!ATTLIST control isInGroup NMTOKEN #FIXED "-1" >`
+`<!ATTLIST control locked NMTOKEN #FIXED "false" >`
+
 The control tag can contain a controlProperties tag, described below.
 controlID is always unique for this list of controls and identifies this control's instance in
 the mockup controlTypeID in the control type.
@@ -87,15 +98,35 @@ controlID of the group)
 locked is a flag that tells you...you guessed it!
 The ControlProperties Tag
 The controlProperties tag contains a child for each property that can be modified for a control
-(using the property inspector
-(http://support.balsamiq.com/customer/portal/articles/110114)). Here's a list of the
-different control properties and where they are used:
-alternateRowColor, rowHeight, hasHeader, vLines, hLines: used for Lists and Data Grids
-controls
-backgroundAlpha (0..1): the transparency of the background
-bgPattern (one of 'allWhite', 'allBlack', 'topOnly', 'topBlueBottom', 'topBlackBottom'), topBar
-(bool): used by the iPhone control
-bold, italic, underline, align, size: used by any control with text in it
+([using the property inspector](http://support.balsamiq.com/customer/portal/articles/110114)).
+
+#Control Properties List
+
+>Here's a list of the different control properties and where they are used
+	
+#`Lists` and `Data Grids` controls
+
+`alternateRowColor`, `rowHeight`, `hasHeader`, `vLines`, `hLines` 
+
+<table>
+<tr><small>**backgroundAlpha** 
+(`0`..`1`): 
+
+>the transparency of the background
+
+#iPhone Control
+	
+<table>
+<tr><small>**bgPattern**(`allWhite`,`allBlack`,`topOnly`,`topBlueBottom`,`topBlackBottom`)
+<table>
+<tr><small>**topBar**(`true`,`false`)
+
+#Text Controls
+
+>any control with text in it
+
+`bold`, `italic`, `underline`, `align`, `size`
+
 borderStyle ('none' or 'square'): used by all controls which can show a border or not
 close, minimize, maximize, dragger, topheight, bottomheight: used by the Dialog /
 Window control
