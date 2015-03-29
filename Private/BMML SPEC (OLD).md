@@ -281,41 +281,102 @@ the left part can also be a src based on where the custom icon is loaded from.
 
 <table><tr><small>**src**
 
-It's either a relative path (for images
-loaded from disk) or an http url. If it starts with $ACCOUNT/assets, it means the image is
-in the account assets folder.
-state ('up', 'selected,', 'focused', 'disabled', 'disabledSelected'): the state of the control
-tabHPosition and tabVPosition: used by the Tab Bar controls
-tooltipDirection (NW, N, NE, E, SE, S, SW, W): used by the tooltip control
-value: the value of a scrollbar, from 0 to 100
-verticalScrollbar (bool) and value (0‑100): whether the control has a scrollbar or not, and
-its value (0 means "top", 100 means "all the way down")
-The Component Control
-The Component control, known as "Symbol" in Mockups, contains a link to another bmml
-(here are the docs for the Symbols feature
-(http://support.balsamiq.com/customer/portal/articles/110439)). The link is an url with an
-optional anchor. If the anchor is missing, then the whole bmml is the target. Otherwise, the
-target is a group which has the same name of the anchor. The group must be at top level in
-the bmml.
-<control controlID="1" controlTypeID="com.balsamiq.mockups::Component"
+	It's either 
+	
+>a relative path (for images loaded from disk) 	
+
+OR 
+
+>an http url
+	
+
+	If it starts with $ACCOUNT/assets
+	it means the image is in the account assets folder.
+
+<table><tr><small>**state** (`up`, `selected`, `focused`, `disabled`, `disabledSelected`)
+	
+	the state of the control
+
+#`Tab Bar` Controls
+
+<table><tr><small>**tabHPosition** and **tabVPosition**
+
+#`Tooltip` Control
+
+<table><tr><small>**tooltipDirection** (`NW`, `N`, `NE`, `E`, `SE`, `S`, `SW`, `W`)
+
+<table><tr><small>**value**
+
+	the value of a scrollbar, from 0 to 100
+
+<table><tr><small>**verticalScrollbar** (`true`,`false`) and **value** (`0‑100`): 
+
+	whether the control has a scrollbar or not, and its value 
+	
+>`0` means "top" 
+
+>`100` means "all the way down"
+
+##The Component Control
+
+The Component control, known as "**Symbol**" in Mockups, contains a link to another bmml
+[here are the docs for the Symbols feature](http://support.balsamiq.com/customer/portal/articles/110439). 
+
+The link is an url with an optional anchor. 
+
+	IF the anchor is missing, 
+	THEN the whole bmml is the target. 
+	ELSE the target is a group which has the same name of the anchor. 
+	
+>The group must be at top level in the bmml.
+
+```<control controlID="1" controlTypeID="com.balsamiq.mockups::Component"
 x="588" y="92" w="407" h="314" measuredW="407" measuredH="314"
-zOrder="1" locked="false" isInGroup="-1">
-<controlProperties>
-<override controlID="1" x="0" y="0" w="116" h="70">
-<color>7775663</color>
-<text>This text is overridden</text>
-</override>
-<src>./assets/symbols.bmml%23Options%20dialog</src>
-</controlProperties>
-</control>
-The ControlProperties tag of a Component control can contain an override tag, for the
-properties of the Symbol that have been overridden in this symbol instance. Attributes of
-override tag:
-controlID: id of the overridden control as in the symbol definition. In case the control is
-nested in groups, then the controlID is the relative path to the control (for example,
-"2:3:0" is the control with id 0 belonging to group 3 nested in group 2 in the symbol
-definition).
-x, y, w, h: (optional) these attributes override the original size and position of the control.
+zOrder="1" locked="false" isInGroup="-1">```
+
+`<controlProperties>`
+
+`<override controlID="1" x="0" y="0" w="116" h="70">`
+
+`<color>7775663</color>`
+
+`<text>This text is overridden</text>`
+
+`</override>`
+
+`<src>./assets/symbols.bmml%23Options%20dialog</src>`
+
+`</controlProperties>`
+
+`</control>`
+
+####The `ControlProperties` tag
+
+of a Component control can contain an override tag,
+for the properties of the Symbol that have been overridden in this symbol instance. 
+	
+####Attributes of `override` tag:
+
+<table><tr><small>**controlID**
+	
+	id of the overridden control as in the symbol definition. 
+>	
+	IF control is nested in groups, 
+	THEN the controlID is the relative path to the control 
+	
+>**Example** `2:3:0` is the control with 
+
+	id 
+	0 belonging to group 
+	3 nested in group 
+	2 in the symbol definition
+
+<table><tr><small>**x, y, w, h** (`optional`) 
+
+	these attributes override the original 
+	size and position of the control.
+
 Measured dimensions are not saved in the bmml.
-It is not possible to override the zOrder attribute. It is not possible to add or remove controls
-in the symbol instance.
+
+	It's NOT possible to override the zOrder attribute. 
+	It's NOT possible to ADD/REMOVE controls in symbol instance.
