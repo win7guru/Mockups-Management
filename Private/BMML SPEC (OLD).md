@@ -127,30 +127,79 @@ The controlProperties tag contains a child for each property that can be modifie
 
 `bold`, `italic`, `underline`, `align`, `size`
 
-borderStyle ('none' or 'square'): used by all controls which can show a border or not
-close, minimize, maximize, dragger, topheight, bottomheight: used by the Dialog /
+#Controls with Borders
+
+>all controls which can show a border or not
+
+<table><tr><small>**borderStyle** (`none` or `square`)
+
+#`Dialog` and `Window` Controls
+
+>used by the Dialog /
 Window control
-color (int): the color of the text or the background of a component, depending on the
-control type
-crop (x,y,h,w): four comma separated values with range [0,1000] that represent cropped
-bounds ratios respect to full control size. For example 0,0,1000,1000 represents the full
-control.
-customData (String): added on 10/21/2009, see here
-(http://blogs.balsamiq.com/product/2009/10/21/weekly‑release‑custom‑ids‑and‑bug‑
-fixes/) for details
-customID (String): added on 10/21/2009, see here
-(http://blogs.balsamiq.com/product/2009/10/21/weekly‑release‑custom‑ids‑and‑bug‑
-fixes/) for details
-filter: used by the Image control: true if the image should be sketched
-direction ('left', 'center', 'right', 'bottom', 'top'): used by Arrows, Tabs, Curly Braces, Pointy
-Button etc
-href: used by all controls that can have a single link to other controls, like Button, Canvas,
-etc. Mockups saved before 9/14/2009 only contain the file name to link to, i.e. foo.bmml
-with no path. Mockups saved after 9/14/2009 contain a string of this form: <name>&bm;
-<viewURL>&bm;<loadURL>&bm;<editURL>. The last 3 values are all the same for
-Mockups for Desktop but are different in the plugin versions.
-hrefs: like href, but used by controls that link to multiple files, like the Accordion, Link
-Bar, etc. It's a comma‑separated list of strings formatted the same way as a single href
+
+`close`, `minimize`, `maximize`, `dragger`, `topheight`, `bottomheight`
+
+<table><tr><small>**color** (`int`): 
+	
+	the color of the text or the background of a component,
+	depending on the control type
+	
+<table><tr><small>**crop** (`x`,`y`,`h`,`w`): 
+	
+<table>
+	
+	four comma separated values with range...
+`[0,1000]`	
+	that represent cropped bounds ratios respect 
+	to full control size. 
+	
+>For example 0,0,1000,1000 represents the full control.
+
+<table><tr><small>**customData** (`String`)
+>added on 10/21/2009, [see here](http://blogs.balsamiq.com/product/2009/10/21/weekly‑release‑custom‑ids‑and‑bug‑fixes/) for details
+
+<table><tr><small>**customID** (`String`)
+>added on 10/21/2009, [see here](http://blogs.balsamiq.com/product/2009/10/21/weekly‑release‑custom‑ids‑and‑bug‑fixes/) for details
+
+#Image Control
+
+<table><tr><small>**filter**(`true`) 
+
+	true if the image should be sketched
+
+#`Arrows`, `Tabs`, `Curly Braces`, `Pointy Button` etc.
+
+<table><tr><small>**direction** (`left`, `center`, `right`, `bottom`, `top`)
+
+#`Button`, `Canvas`
+
+	all controls that can have a 
+	single link to other controls
+
+<table><tr><small>**href**, like  
+
+<table>
+<tr>
+
+1.	Mockups saved before 9/14/2009 only contain the file name to link to,  	
+
+	i.e. `foo.bmml` with no path. 
+
+2. Mockups saved after 9/14/2009 contain a string of this form: 	
+
+	`<name>&bm;<viewURL>&bm;<loadURL>&bm;<editURL>`. 
+	
+>The last 3 values are all the same for Mockups for Desktop but are different in the plugin versions.
+
+#Accordion, LinkBar
+
+	like href, but used by controls that link to 
+	multiple files
+
+<table><tr><small>**hrefs** 
+
+It's a comma‑separated list of strings formatted the same way as a single href
 string (see previous bullet).
 icon: a string composed of both iconID of the icon to use for this control and its size, like
 this "iconID|48". There are over 220 icons, each with a unique ID. The sizes are either 16,
