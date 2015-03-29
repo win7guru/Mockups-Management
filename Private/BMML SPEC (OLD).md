@@ -1,49 +1,69 @@
 #BMML File Format Specification
 
-BMML is the Balsamiq Mockups Markup Language, the flavor of XML used by Balsamiq Mockups to save its data.
+`BMML` is the (**B**alsamiq **M**ockups **M**arkup **L**anguage), the flavor of XML used by Balsamiq Mockups to save its data.
 	
-This document outlines the BMML file format, in the hopes that this will be useful to you when integrating Mockups in your daily work.  You could for instance import BMML into your
-tool, write a BMML parser which generates HTML or MXML or XAML or running code...the sky is the limit!
+This document outlines the `BMML` file format, in the hopes that this will be useful to you when integrating Mockups in your daily work.  You could for instance import BMML into your
+tool, write a BMML parser which generates `HTML` or `MXML` or `XAML` or running code...the sky is the limit!
 
+---
+---
 **Warning:** there are some things that aren't documented here, like what properties each control type supports. To figure those things out, just open Mockups, drag a control type to the canvas, change some properties in the property inspector and look at the resulting BMML.  In other words, we try our best to keep this document up‑to‑date, but you should trust
 shipped code more. :)
 
->Remember that XML syntax is case‑sensitive, e.g., <tag> and <Tag> are different.
+>Remember that XML syntax is case‑sensitive, e.g., `<tag>` and `<Tag>` are different.
 
 ##Quick Overview
 
 Here's a sample BMML containing a single `Callout` control:
 
-<table>
-<tr>
+```<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="941" measuredH="169" mockupW="36" mockupH="40">```
 
-<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="941" measuredH="169" mockupW="36" mockupH="40">
+`<controls>`
 
-<controls>
+`<control controlID="1" controlTypeID="com.balsamiq.mockups::CallOut" x="644" y="129" w="-1" h="-1" measuredW="36" measuredH="40" zOrder="1" locked="false" isInGroup="-1">`
 
-<control controlID="1" controlTypeID="com.balsamiq.mockups::CallOut" x="644" y="129" w="-1" h="-1" measuredW="36" measuredH="40" zOrder="1" locked="false" isInGroup="-1">
+`<controlProperties>`
 
-<controlProperties>
+`<text>Hello!</text>`
 
-<text>Hello!</text>
+`<backgroundAlpha>0.25</backgroundAlpha>`
 
-<backgroundAlpha>0.25</backgroundAlpha>
+`<color>65280</color>`
 
-<color>65280</color>
+`</controlProperties>`
 
-</controlProperties>
+`</control>`
 
-</control>
+`</controls>`
 
-</controls>
+`</mockup>`
 
-</mockup>```
-</table>
-As you can see, the top‑level tag is a 'mockup' tag. Within it, there's a 'controls' tag, which
-includes a list of 'control' elements, one for each control in the mockup. Each control element
-can include an optional 'controlProperties' element, with different children depending on the
-type of element. We will see below what all the attributes mean in detail.
-The Mockup Tag
+	As you can see, the top‑level tag is a 'mockup' tag. 
+	
+<table><td>Within it, 
+
+	there's a 'controls' tag, 
+	
+>which includes a list of 
+
+	controls
+>
+
+	elements
+	
+>one for each control in the mockup. 
+>
+
+	Each control element can include an optional 'controlProperties' element, 
+	
+with 
+
+	different children depending on the type of element. 
+	
+>We will see below what all the attributes mean in detail.
+
+#The Mockup Tag
+
 Here's the DTD snippet for the mockup tag:
 
 ```<!ELEMENT mockup ( controls? ) >
@@ -56,16 +76,45 @@ Here's the DTD snippet for the mockup tag:
 <!ATTLIST mockup version NMTOKEN #REQUIRED >
 <!ELEMENT controls ( control? ) >```
 
-A `mockup` tag includes a `controls` tag, described below. measuredW and measuredH are the dimensions, in pixels, of the mockup, including the top‑left white space around it. mockupW
-and mockupH are the dimensions of the mockup without any space around it. In other words,
-this would be the size of the PNG if you exported it. The skin tag, not used prior to 2.2.1, can
-either be "sketch" or "wireframe". The fontFace tag, introduced in 2.2.1, can either be
-"Balsamiq Sans" or "_sans". The version tag is for the version of the BMML specification, which
-is 1.0 so far. The controls tag is simple, it doesn't have any attributes and just contains a list
-of 'control' tags.
-The Control Tags
+A `mockup` tag includes a `controls` tag, described below. 
 
-Here's the DTD snippet for the control tag:
+`measuredW` and `measuredH` are 
+
+	the dimensions, in pixels, of the mockup, 
+	including the top‑left white space around it. 
+	
+`mockupW` and `mockupH` are 
+
+	the dimensions of the mockup 
+	without any space around it. 
+	
+In other words,
+
+>this would be the size of the PNG if you exported it. 
+
+#The Skin Tag
+
+The `skin` tag, not used prior to 2.2.1, can either be 
+
+	"sketch" or "wireframe". 
+	
+The `fontFace` tag, introduced in 2.2.1, can either be
+
+	"Balsamiq Sans" or "_sans". 
+
+#The Version Tag
+
+The `version` tag is for the version of the BMML specification, 
+which is 1.0 so far. 
+
+#The Controls Tag
+
+The `controls` tag is simple, it doesn't have any attributes and 
+just contains a listof `control` tags.
+
+#The Control Tags
+
+>Here's the DTD snippet for the control tag:
 
 `<!ELEMENT control ( controlProperties? ) >`
 `<!ATTLIST control controlID NMTOKEN #REQUIRED >`
@@ -80,25 +129,41 @@ Here's the DTD snippet for the control tag:
 `<!ATTLIST control isInGroup NMTOKEN #FIXED "-1" >`
 `<!ATTLIST control locked NMTOKEN #FIXED "false" >`
 
-The control tag can contain a controlProperties tag, described below.
-controlID is always unique for this list of controls and identifies this control's instance in
-the mockup controlTypeID in the control type.
-w and h represent the size in pixels of the control.
-A value of ‑1 means that you should look at measuredW or measuredH instead.
-measuredW and measuredH represent the size in pixels of the control, when shown in its
-'natural state', i.e., it's the preferred dimension of the control as dictated by the control
-itself. For instance, for a Label control, measuredW would be large enough to show the
+##The Control Tag
+
+The `control` tag can contain a `controlProperties` tag, described below.
+
+`controlID` is always unique for this list of controls and 
+identifies this control's instance in the mockup `controlTypeID` in the control type.
+
+`w` and `h` represent the size in pixels of the control.
+
+	A value of ‑1 means that you should look at measuredW or measuredH instead.
+
+`measuredW` and `measuredH` represent the size in pixels of the control, 
+when shown in its `natural state`, 
+
+	i.e., it's the preferred dimension of the control as dictated by the control itself. 
+	
+For instance, for a Label control, `measuredW` would be large enough to show the
 whole text with no cropping.
-x and y represent the position in pixels of the control, relative to the top‑left corner of the
-canvas.
-zOrder represents the layer ordering of this control.
-Values are unique and sequential within the current list of controls.
-isInGroup tells you if a control is part of a group (‑1 means "no", otherwise it uses the
-controlID of the group)
-locked is a flag that tells you...you guessed it!
-The ControlProperties Tag
-The controlProperties tag contains a child for each property that can be modified for a control
-([using the property inspector](http://support.balsamiq.com/customer/portal/articles/110114)).
+
+`x` and `y` represent the position in pixels of the control, 
+relative to the top‑left corner of the canvas.
+
+`zOrder` represents the layer ordering of this control.
+	
+	Values are unique and sequential within the current list of controls.
+
+`isInGroup` tells you if a control is part of a group (`‑1` means "no", 
+otherwise it uses the controlID of the group)
+
+`locked` is a flag that tells you...you guessed it! Whether a control is locked
+
+##The ControlProperties Tag
+
+The `controlProperties` tag contains a child for each property 
+that can be modified for a control ([using the property inspector](http://support.balsamiq.com/customer/portal/articles/110114)).
 
 #Control Properties List
 
