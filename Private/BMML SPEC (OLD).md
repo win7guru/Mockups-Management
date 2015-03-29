@@ -66,15 +66,23 @@ with
 
 Here's the DTD snippet for the mockup tag:
 
-```<!ELEMENT mockup ( controls? ) >
-<!ATTLIST mockup measuredW NMTOKEN #REQUIRED >
-<!ATTLIST mockup measuredH NMTOKEN #REQUIRED >
-<!ATTLIST mockup mockupW NMTOKEN #REQUIRED >
-<!ATTLIST mockup mockupH NMTOKEN #REQUIRED >
-<!ATTLIST mockup skin NMTOKEN #REQUIRED >
-<!ATTLIST mockup fontFace NMTOKEN #REQUIRED >
-<!ATTLIST mockup version NMTOKEN #REQUIRED >
-<!ELEMENT controls ( control? ) >```
+`<!ELEMENT mockup ( controls? ) >`
+
+`<!ATTLIST mockup measuredW NMTOKEN #REQUIRED >`
+
+`<!ATTLIST mockup measuredH NMTOKEN #REQUIRED >`
+
+`<!ATTLIST mockup mockupW NMTOKEN #REQUIRED >`
+
+`<!ATTLIST mockup mockupH NMTOKEN #REQUIRED >`
+
+`<!ATTLIST mockup skin NMTOKEN #REQUIRED >`
+
+`<!ATTLIST mockup fontFace NMTOKEN #REQUIRED >`
+
+`<!ATTLIST mockup version NMTOKEN #REQUIRED >`
+
+`<!ELEMENT controls ( control? ) >`
 
 A `mockup` tag includes a `controls` tag, described below. 
 
@@ -117,16 +125,27 @@ just contains a listof `control` tags.
 >Here's the DTD snippet for the control tag:
 
 `<!ELEMENT control ( controlProperties? ) >`
+
 `<!ATTLIST control controlID NMTOKEN #REQUIRED >`
+
 `<!ATTLIST control controlTypeID NMTOKEN #REQUIRED >`
+
 `<!ATTLIST control w NMTOKEN #FIXED "-1" >`
+
 `<!ATTLIST control h NMTOKEN #FIXED "-1" >`
+
 `<!ATTLIST control measuredH NMTOKEN #REQUIRED >`
+
 `<!ATTLIST control measuredW NMTOKEN #REQUIRED >`
+
 `<!ATTLIST control x NMTOKEN #REQUIRED >`
+
 `<!ATTLIST control y NMTOKEN #REQUIRED >`
+
 `<!ATTLIST control zOrder NMTOKEN #REQUIRED >`
+
 `<!ATTLIST control isInGroup NMTOKEN #FIXED "-1" >`
+
 `<!ATTLIST control locked NMTOKEN #FIXED "false" >`
 
 ##The Control Tag
